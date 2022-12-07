@@ -1,0 +1,12 @@
+C:\Users\heath\OneDrive\Desktop\repos\FinalProject\RealEstateDB.Data\bin\Debug\net6.0\RealEstateDB.Data.deps.json
+C:\Users\heath\OneDrive\Desktop\repos\FinalProject\RealEstateDB.Data\bin\Debug\net6.0\RealEstateDB.Data.dll
+C:\Users\heath\OneDrive\Desktop\repos\FinalProject\RealEstateDB.Data\bin\Debug\net6.0\RealEstateDB.Data.pdb
+C:\Users\heath\OneDrive\Desktop\repos\FinalProject\RealEstateDB.Data\obj\Debug\net6.0\RealEstateDB.Data.csproj.AssemblyReference.cache
+C:\Users\heath\OneDrive\Desktop\repos\FinalProject\RealEstateDB.Data\obj\Debug\net6.0\RealEstateDB.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\heath\OneDrive\Desktop\repos\FinalProject\RealEstateDB.Data\obj\Debug\net6.0\RealEstateDB.Data.AssemblyInfoInputs.cache
+C:\Users\heath\OneDrive\Desktop\repos\FinalProject\RealEstateDB.Data\obj\Debug\net6.0\RealEstateDB.Data.AssemblyInfo.cs
+C:\Users\heath\OneDrive\Desktop\repos\FinalProject\RealEstateDB.Data\obj\Debug\net6.0\RealEstateDB.Data.csproj.CoreCompileInputs.cache
+C:\Users\heath\OneDrive\Desktop\repos\FinalProject\RealEstateDB.Data\obj\Debug\net6.0\RealEstateDB.Data.dll
+C:\Users\heath\OneDrive\Desktop\repos\FinalProject\RealEstateDB.Data\obj\Debug\net6.0\refint\RealEstateDB.Data.dll
+C:\Users\heath\OneDrive\Desktop\repos\FinalProject\RealEstateDB.Data\obj\Debug\net6.0\RealEstateDB.Data.pdb
+C:\Users\heath\OneDrive\Desktop\repos\FinalProject\RealEstateDB.Data\obj\Debug\net6.0\ref\RealEstateDB.Data.dll

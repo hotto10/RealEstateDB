@@ -1,0 +1,233 @@
+@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
+
+html, body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h1:focus {
+    outline: none;
+}
+
+a, .btn-link {
+    color: #0071c1;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.content {
+    padding-top: 1.1rem;
+}
+
+.valid.modified:not([type=checkbox]) {
+    outline: 1px solid #26b050;
+}
+
+.invalid {
+    outline: 1px solid red;
+}
+
+.validation-message {
+    color: red;
+}
+
+#blazor-error-ui {
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+    #blazor-error-ui .dismiss {
+        cursor: pointer;
+        position: absolute;
+        right: 0.75rem;
+        top: 0.5rem;
+    }
+
+.blazor-error-boundary {
+    background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTYiIGhlaWdodD0iNDkiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIG92ZXJmbG93PSJoaWRkZW4iPjxkZWZzPjxjbGlwUGF0aCBpZD0iY2xpcDAiPjxyZWN0IHg9IjIzNSIgeT0iNTEiIHdpZHRoPSI1NiIgaGVpZ2h0PSI0OSIvPjwvY2xpcFBhdGg+PC9kZWZzPjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMCkiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yMzUgLTUxKSI+PHBhdGggZD0iTTI2My41MDYgNTFDMjY0LjcxNyA1MSAyNjUuODEzIDUxLjQ4MzcgMjY2LjYwNiA1Mi4yNjU4TDI2Ny4wNTIgNTIuNzk4NyAyNjcuNTM5IDUzLjYyODMgMjkwLjE4NSA5Mi4xODMxIDI5MC41NDUgOTIuNzk1IDI5MC42NTYgOTIuOTk2QzI5MC44NzcgOTMuNTEzIDI5MSA5NC4wODE1IDI5MSA5NC42NzgyIDI5MSA5Ny4wNjUxIDI4OS4wMzggOTkgMjg2LjYxNyA5OUwyNDAuMzgzIDk5QzIzNy45NjMgOTkgMjM2IDk3LjA2NTEgMjM2IDk0LjY3ODIgMjM2IDk0LjM3OTkgMjM2LjAzMSA5NC4wODg2IDIzNi4wODkgOTMuODA3MkwyMzYuMzM4IDkzLjAxNjIgMjM2Ljg1OCA5Mi4xMzE0IDI1OS40NzMgNTMuNjI5NCAyNTkuOTYxIDUyLjc5ODUgMjYwLjQwNyA1Mi4yNjU4QzI2MS4yIDUxLjQ4MzcgMjYyLjI5NiA1MSAyNjMuNTA2IDUxWk0yNjMuNTg2IDY2LjAxODNDMjYwLjczNyA2Ni4wMTgzIDI1OS4zMTMgNjcuMTI0NSAyNTkuMzEzIDY5LjMzNyAyNTkuMzEzIDY5LjYxMDIgMjU5LjMzMiA2OS44NjA4IDI1OS4zNzEgNzAuMDg4N0wyNjEuNzk1IDg0LjAxNjEgMjY1LjM4IDg0LjAxNjEgMjY3LjgyMSA2OS43NDc1QzI2Ny44NiA2OS43MzA5IDI2Ny44NzkgNjkuNTg3NyAyNjcuODc5IDY5LjMxNzkgMjY3Ljg3OSA2Ny4xMTgyIDI2Ni40NDggNjYuMDE4MyAyNjMuNTg2IDY2LjAxODNaTTI2My41NzYgODYuMDU0N0MyNjEuMDQ5IDg2LjA1NDcgMjU5Ljc4NiA4Ny4zMDA1IDI1OS43ODYgODkuNzkyMSAyNTkuNzg2IDkyLjI4MzcgMjYxLjA0OSA5My41Mjk1IDI2My41NzYgOTMuNTI5NSAyNjYuMTE2IDkzLjUyOTUgMjY3LjM4NyA5Mi4yODM3IDI2Ny4zODcgODkuNzkyMSAyNjcuMzg3IDg3LjMwMDUgMjY2LjExNiA4Ni4wNTQ3IDI2My41NzYgODYuMDU0N1oiIGZpbGw9IiNGRkU1MDAiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvZz48L3N2Zz4=) no-repeat 1rem/1.8rem, #b32121;
+    padding: 1rem 1rem 1rem 3.7rem;
+    color: white;
+}
+
+    .blazor-error-boundary::after {
+        content: "An error has occurred."
+    }
+
+.ot-asterisk {
+    color: #cb333b;
+    font-weight: bolder;
+}
+
+.ot-text-warning {
+    color: #cb333b;
+    fill: #cb333b;
+    stroke: #cb333b;
+}
+.NoDataAvailable {
+    color: lightgrey;
+    font-size: 24px;
+    text-align: center;
+    margin: 2rem;
+
+}
+.customh3 {
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+    font-size: 50px;
+    padding: 80px 50px;
+    text-align: center;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+}
+h1 {
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+    font-size: 92px;
+    padding: 80px 50px;
+    text-align: center;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+}   
+    
+    .elegantshadow {
+        color: #131313;
+        background-color: #e7e5e4;
+        letter-spacing: .15em;
+        text-shadow: 1px -1px 0 #767676,
+            -1px 2px 1px #737272, 
+            -2px 4px 1px #767474, 
+            -3px 6px 1px #787777, 
+            -4px 8px 1px #7b7a7a,
+            -5px 10px 1px #7f7d7d, 
+            -6px 12px 1px #828181, 
+            -7px 14px 1px #868585, 
+            -8px 16px 1px #8b8a89, 
+            -9px 18px 1px #8f8e8d, 
+            -10px 20px 1px #949392,
+            -11px 22px 1px #999897,
+            -12px 24px 1px #9e9c9c,
+            -13px 26px 1px #a3a1a1, 
+            -14px 28px 1px #a8a6a6,
+            -15px 30px 1px #adabab,
+            -16px 32px 1px #b2b1b0, 
+            -17px 34px 1px #b7b6b5,
+            -18px 36px 1px #bcbbba, 
+            -19px 38px 1px #c1bfbf, 
+            -20px 40px 1px #c6c4c4, 
+            -21px 42px 1px #cbc9c8, 
+            -22px 44px 1px #cfcdcd, 
+            -23px 46px 1px #d4d2d1, 
+            -24px 48px 1px #d8d6d5, 
+            -25px 50px 1px #dbdad9,
+            -26px 52px 1px #dfdddc,
+            -27px 54px 1px #e2e0df, 
+            -28px 56px 1px #e4e3e2;
+    }
+/*h3 {
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+    font-size: 50px;
+    padding: 80px 50px;
+    text-align: center;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+
+}*/
+body {
+    background: linear-gradient(90deg, #efd5ff 0%, #515ada 100%);
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+    position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+    cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Six columns side by side */
+.column {
+    float: left;
+    width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+    opacity: 0.6;
+}
+
+    .active,
+    .demo:hover {
+        opacity: 1;
+    }

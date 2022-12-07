@@ -1,0 +1,337 @@
+﻿@page "/Tenant"
+@using RealEstate.WebUI.Models
+@inherits TenantBase
+
+<style>
+    .customh3{
+        padding:1px 1px !important;
+    }
+
+</style>
+
+<PageTitle>Rental Application</PageTitle>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-6">
+
+            <RadzenText TextStyle="TextStyle.Subtitle2" class="customh3">Managing Tenants</RadzenText>
+            <RadzenBreadCrumb>
+                <RadzenBreadCrumbItem Path="/" Text="Home" />
+            </RadzenBreadCrumb>
+
+        </div>
+        <div class="col-6">
+        </div>
+
+    </div>
+
+    @if (ShowDataEntryForm)
+    {
+        <RadzenTemplateForm TItem="TenantViewModel" Data="@ActiveModel" Submit="OnFormSubmit">
+            <RadzenCard>
+                <div class="row">
+                    <div class="col-3">
+                    </div>
+                    <div class="col-6">
+                        <p class="customh3">@DataEntryTitle</p>
+                    </div>
+                    <div class="col-3">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-10 text-right">
+                    </div>
+
+                    <div class="col-2 text-right">
+                        <p style="color: grey"> <Asterisk /> Required</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-4">
+                        <RadzenLabel Text="First Name"></RadzenLabel><Asterisk></Asterisk>
+                        <RadzenTextBox Placeholder="Enter First Name"
+                                   @bind-Value=ActiveModel.FirstName
+                                   Name="FirstName"
+                                   Style="width:100%"
+                                   Disabled="@ShowDeleteConfirmation" />
+                        <RadzenRequiredValidator Component="FirstName"
+                                             Text="First Name is a required field"
+                                             Style="position:relative"
+                                             Popup=@PopUpHelper />
+                    </div>
+                    <div class="col-4">
+                        <RadzenLabel Text="Middle Name"></RadzenLabel>
+                        <RadzenTextBox Placeholder="Enter Middle Name"
+                                   @bind-Value=ActiveModel.MiddleName
+                                   Name="MiddleName"
+                                   Style="width:100%"
+                                   Disabled="@ShowDeleteConfirmation" />
+                       
+                    </div>
+
+                    <div class="col-4">
+                        <RadzenLabel Text="Last Name"></RadzenLabel><Asterisk></Asterisk>
+                        <RadzenTextBox Placeholder="Enter Last Name"
+                                   @bind-Value=ActiveModel.LastName
+                                   Name="LastName"
+                                   Style="width:100%"
+                                   Disabled="@ShowDeleteConfirmation" />
+                        <RadzenRequiredValidator Component="LastName"
+                                             Text="Last Name is a required field"
+                                             Style="position:relative"
+                                             Popup=@PopUpHelper />
+                    </div>
+                    
+                    
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <RadzenLabel Text="Address"></RadzenLabel><Asterisk></Asterisk>
+                        <RadzenTextBox Placeholder="Enter Address"
+                                   @bind-Value=ActiveModel.Address1
+                                   Name="Address1"
+                                   Style="width:100%"
+                                   Disabled="@ShowDeleteConfirmation" />
+                        <RadzenRequiredValidator Component="Address1"
+                                             Text="Address is a required field"
+                                             Style="position:relative"
+                                             Popup=@PopUpHelper />
+                    </div>
+                    <div class="col-6">
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <RadzenLabel Text="Suite/Apt Number"></RadzenLabel><Asterisk></Asterisk>
+                        <RadzenTextBox Placeholder="Enter Suite/Apt Number"
+                                   @bind-Value=ActiveModel.Address2
+                                   Name="Address2"
+                                   Style="width:100%"
+                                   Disabled="@ShowDeleteConfirmation" />
+                       
+                    </div>
+                    <div class="col-6">
+                    </div>
+
+                </div>
+
+
+                 <div class="row">
+                    <div class="col-2">
+                        <RadzenLabel Text="City"></RadzenLabel><Asterisk></Asterisk>
+                        <RadzenTextBox Placeholder="Enter City"
+                                   @bind-Value=ActiveModel.City
+                                   Name="City"
+                                   Style="width:100%"
+                                   Disabled="@ShowDeleteConfirmation" />
+                        <RadzenRequiredValidator Component="City"
+                                             Text="City is a required field"
+                                             Style="position: relative"
+                                             Popup=@PopUpHelper />
+                    </div>
+                    <div class="col-2">
+                        <RadzenLabel Text="State"></RadzenLabel><Asterisk></Asterisk>
+                        <RadzenTextBox Placeholder="Enter State"
+                                   @bind-Value=ActiveModel.StateAbr
+                                   Name="State"
+                                   Style="width:100%"
+                                   Disabled="@ShowDeleteConfirmation" />
+                        <RadzenRequiredValidator Component="State"
+                                             Text="State is a required field"
+                                             Style="position: relative"
+                                             Popup=@PopUpHelper />
+                        <RadzenLengthValidator Component="State" Min="2" Text="State Should Be At Least 2 Characters" Style="postion: relative" Popup=@PopUpHelper />
+                        <RadzenLengthValidator Component="State" Max="2" Text="State Should Be At Least Five Characters" Style="postion: relative" Popup=@PopUpHelper /> 
+                    </div>
+                    <div class="col-2">
+                        <RadzenLabel Text="ZipCode"></RadzenLabel><Asterisk></Asterisk>
+                        <RadzenTextBox Placeholder="Enter ZipCode"
+                                   @bind-Value=ActiveModel.ZipCode
+                                   Name="ZipCode"
+                                   Style="width:100%"
+                                   Disabled="@ShowDeleteConfirmation" />
+                        <RadzenRequiredValidator Component="ZipCode"
+                                             Text="ZipCode is a required field"
+                                             Style="position: relative"
+                                             Popup=@PopUpHelper />
+
+                        <RadzenLengthValidator Component="ZipCode" Min="5" Text="ZipCode Should Be At Least Five Characters" Style="postion: relative" Popup=@PopUpHelper />
+                        <RadzenLengthValidator Component="ZipCode" Max="5" Text="ZipCode Should Be At Least Five Characters" Style="postion: relative" Popup=@PopUpHelper />    
+                    </div>
+
+                    <div class="col-6">
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <RadzenLabel Text="Email Address"></RadzenLabel><Asterisk></Asterisk>
+                        <RadzenTextBox Placeholder="Enter Email Address"
+                                   @bind-Value=ActiveModel.EmailAddress
+                                   Name="EmailAddress"
+                                   Style="width:100%"
+                                   Disabled="@ShowDeleteConfirmation" />
+                       
+                    </div>
+                    <div class="col-6">
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <RadzenLabel Text="License Number"></RadzenLabel><Asterisk></Asterisk>
+                        <RadzenTextBox Placeholder="Enter License Number"
+                                   @bind-Value=ActiveModel.DriverLicense
+                                   Name="DriverLicense"
+                                   Style="width:100%"
+                                   Disabled="@ShowDeleteConfirmation" />
+
+                    </div>
+                    <div class="col-6">
+                    </div>
+
+                </div>
+
+                @if (ShowDeleteConfirmation)
+
+                {
+                    <div class="row" style="padding-top:15px">
+                        <div class="col-6">
+                            <span class="ot-warning-text">
+                                Click the Confirm Button below to permanently remove this address.  Otherwise,
+                                Click the Cancel Button to return to Property List.
+                            </span>
+                        </div>
+                        <div class="col-6">
+                        </div>
+
+                    </div>
+
+
+                }
+
+                <div class="row" style="padding:15px">
+                    <div class="col-3">
+                    </div>
+                    <div class="col-1">
+                    </div>
+                    <div class="col-1">
+                        <RadzenButton Text="Cancel" ButtonStyle="ButtonStyle.Warning" Click=@(args => CancelRentalPropertyClicked()) />
+                    </div>
+                    <div class="col-1">
+                        @if (ShowDeleteConfirmation)
+                        {
+                            <RadzenButton Text="Confirm" ButtonStyle="ButtonStyle.Secondary" Click=@(args => DeleteConfirmationClicked()) />
+                        }
+                        else
+                        {
+                            <RadzenButton ButtonType="ButtonType.Submit" Text="Save" ButtonStyle="ButtonStyle.Success" />
+                        }
+                    </div>
+                    <div class="col-6">
+                    </div>
+                </div>
+            </RadzenCard>
+        </RadzenTemplateForm>
+
+    }
+    else
+    {
+        @if (Tenants != null)
+        {
+            <div class="row">
+                <div class="col-4">
+                </div>
+                <div class="col-4">
+                </div>
+                <div class="col-1">
+                </div>
+                <div class="col-3">
+                    <RadzenButton Text="New Applicant" ButtonStyle="ButtonStyle.Danger" Click=@(args => NewRentalPropertyClicked())></RadzenButton>
+                </div>
+
+            </div>
+            <div class="row" style="padding-top:15px">
+
+                <div class="col-12">
+
+                    <RadzenDataGrid @ref="dataGrid"
+                            AllowFiltering="true"
+                            FilterMode="FilterMode.Advanced"
+                            IsLoading="@IsLoading"
+                            PageSize="@PageSize"
+                            AllowPaging="true"
+                            ShowPagingSummary="true"
+                            PagerHorizontalAlign="HorizontalAlign.Center"
+                            AllowColumnResize="true"
+                            LogicalFilterOperator="LogicalFilterOperator.Or"
+                            FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive"
+                            TItem="TenantViewModel"
+                            @bind-Value="@SelectedRow"
+                            Data="@Tenants">
+
+                        <EmptyTemplate>
+
+                            <p class="NoDataAvailable" style="text-align: left !important;">No Data Available</p>
+
+                        </EmptyTemplate>
+
+
+
+                        <Columns>
+                            <RadzenDataGridColumn TItem="TenantViewModel" Property="FirstName" Title="First Name" TextAlign="TextAlign.Left" />
+                            <RadzenDataGridColumn TItem="TenantViewModel" Property="LastName" Title="Last Name" TextAlign="TextAlign.Left" />
+                            <RadzenDataGridColumn TItem="TenantViewModel" Property="MiddleName" Title="Middle Name" TextAlign="TextAlign.Left" />
+                            <RadzenDataGridColumn TItem="TenantViewModel" Property="Address1" Title="Address" TextAlign="TextAlign.Left" >
+                                <Template Context="data">
+                                    @if(!string.IsNullOrEmpty(data.Address1)){
+                                        <a href="" @onclick:preventDefault @onclick="() =>
+                                            EditRentalPropertyClicked(data)">
+                                            @data.Address1
+                                    </a>
+                                    }
+                                    
+                                </Template>
+
+                            </RadzenDataGridColumn>
+
+                            <RadzenDataGridColumn TItem="TenantViewModel" Property="Address2" Title="Suite/Apt Number" TextAlign="TextAlign.Left" />
+                            <RadzenDataGridColumn TItem="TenantViewModel" Property="City" Title="City" TextAlign="TextAlign.Left" />
+                            <RadzenDataGridColumn TItem="TenantViewModel" Property="StateAbr" Title="State" TextAlign="TextAlign.Left" />
+                            <RadzenDataGridColumn TItem="TenantViewModel" Property="ZipCode" Title="Last ZipCode" TextAlign="TextAlign.Left" />
+                            <RadzenDataGridColumn TItem="TenantViewModel" Property="EmailAddress" Title="Email Address" TextAlign="TextAlign.Left" />
+                            <RadzenDataGridColumn TItem="TenantViewModel" Property="PhoneNumber" Title="Phone Number" TextAlign="TextAlign.Left" />
+                            <RadzenDataGridColumn TItem="TenantViewModel" Property="DriverLicense" Title="Driver's License" TextAlign="TextAlign.Left" />
+
+
+                            <RadzenDataGridColumn TItem="TenantViewModel" Property="ZipCode" Title="Actions" TextAlign="TextAlign.Left">
+                                <Template Context="data">
+                                    <RadzenButton Title="Edit Applicant" ButtonStyle="ButtonStyle.Success" Icon="edit" Size="ButtonSize.ExtraSmall" Click=@(args => EditRentalPropertyClicked(data))></RadzenButton>
+                                    <RadzenButton Title="Delete Applicant" ButtonStyle="ButtonStyle.Dark" Icon="delete" Size="ButtonSize.ExtraSmall" Click=@(args => DeleteRentalPropertyClicked(data))></RadzenButton>
+
+                                </Template>
+
+
+
+                            </RadzenDataGridColumn>
+
+
+
+                        </Columns>
+
+                    </RadzenDataGrid>
+                </div>
+
+
+            </div>
+        }
+    }
+
+</div>
